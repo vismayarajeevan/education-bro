@@ -26,7 +26,7 @@ export const EnquiryForm = () => {
     const message = `New Enquiry!\n\nStudent Details:\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCollege: ${college?.name}\nCourse: ${course?.name}\nMessage: ${formData.message}`;
     
     // Replace this number with your business WhatsApp number
-    const whatsappNumber = '8157999175';
+    const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
     
     // Open WhatsApp with the pre-filled message
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
