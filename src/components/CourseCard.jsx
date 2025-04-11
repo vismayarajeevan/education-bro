@@ -1,28 +1,32 @@
-import React from 'react'
+
+
+
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Clock, GraduationCap } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 
 const CourseCard = ({ course, locationId }) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div
-    className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer p-6"
-    onClick={() => navigate(`/location/${locationId}/course/${course.id}`)}
-  >
-    <div className="flex items-center gap-3 mb-4">
-      <div className="p-3 bg-blue-100 rounded-full">
-        <GraduationCap className="w-6 h-6 text-blue-600" />
+      className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+      onClick={() => navigate(`/location/${locationId}/course/${course.id}`)}
+    >
+      <img
+        src={course.image}
+        alt={course.name}
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <div className="flex items-center gap-2 mb-2">
+          <GraduationCap className="w-6 h-6 text-blue-600" />
+          <h3 className="text-xl font-semibold text-gray-800">{course.name}</h3>
+        </div>
+        <p className="text-gray-600">{course.description}</p>
       </div>
-      <h3 className="text-xl font-semibold text-gray-800">{course.name}</h3>
     </div>
-    <p className="text-gray-600 mb-4">{course.description}</p>
-    <div className="flex items-center gap-2 text-gray-500">
-      <Clock className="w-4 h-4" />
-      <span className="text-sm">{course.duration}</span>
-    </div>
-  </div>
-  )
-}
+  );
+};
 
 export default CourseCard
