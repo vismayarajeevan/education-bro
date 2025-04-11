@@ -7,20 +7,17 @@ export const CollegeCard = ({ college, locationId, courseId }) => {
 
   return (
     <div
-      className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+      className="bg-white rounded-xl shadow-lg p-6 cursor-pointer transform transition-transform hover:scale-105"
       onClick={() => navigate(`/enquiry/${college.id}?location=${locationId}&course=${courseId}`)}
     >
-      <img
-        src={college.image}
-        alt={college.name}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-6">
-        <div className="flex items-center gap-2 mb-2">
-          <Building2 className="w-6 h-6 text-blue-600" />
-          <h3 className="text-xl font-semibold text-gray-800">{college.name}</h3>
+      <div className="flex items-center gap-4">
+        <div className="bg-blue-100 p-3 rounded-full">
+          <Building2 className="w-8 h-8 text-blue-600" />
         </div>
-        <p className="text-gray-600">{college.description}</p>
+        <div>
+          <h3 className="text-xl font-semibold text-gray-800">{college.name}</h3>
+          <p className="text-gray-600 mt-1">{college.description}</p>
+        </div>
       </div>
     </div>
   );

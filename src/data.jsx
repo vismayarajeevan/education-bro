@@ -105,37 +105,37 @@ export const colleges = [
   {
     id: '1',
     name: 'Bangalore Institute of Technology',
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1200',
+    description: 'Premier engineering institution known for excellence',
     description: 'Premier engineering college with state-of-the-art research facilities',
     locationId: '3',
     courses: ['1', '2'],
-    phone: '919876543210'
+   
   },
   {
     id: '2',
     name: 'Mumbai Technical Institute',
-    image: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&q=80&w=1200',
+    description: 'Premier engineering institution known for excellence',
     description: 'Leading institution with industry partnerships and modern infrastructure',
     locationId: '3',
     courses: ['1'],
-    phone: '919876543211'
+    
   },
   {
     id: '3',
     name: 'Mangalore College of Engineering',
-    image: 'https://images.unsplash.com/photo-1592280771190-3e2e4d571952?auto=format&fit=crop&q=80&w=1200',
+    description: 'Premier engineering institution known for excellence',
     description: 'Top-ranked college known for excellence in mechanical engineering',
     locationId: '3',
     courses: ['4'],
-    phone: '919876543212'
+  
   },
   {
     id: '4',
     name: 'Coimbatore Technology Institute',
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=1200',
+    description: 'Premier engineering institution known for excellence',
     description: 'Advanced research center with focus on emerging technologies',
     locationId: '4',
     courses: ['5'],
-    phone: '919876543213'
+   
   }
 ];
